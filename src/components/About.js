@@ -3,8 +3,8 @@ import React from "react";
 export default function About() {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "./Ashishresume.pdf";
-        link.download = "file.pdf";
+        link.href = "./Ashish_Resume_Fall_23.pdf";
+        link.download = "Ashish_Abraham_Resume.pdf";
         link.click();
       };
 
@@ -17,9 +17,12 @@ export default function About() {
             <br className="hidden lg:inline-block" /> Software Engineer/ Tech Enthusiast!
           </h1>
           <p className="mb-8 leading-relaxed">
-            I am Graduate Student at the University of Florida, pursuing a Master's Degree in Computer and Information Sciences.
+           Innovative and results-driven, I'm Ashish Sunny Abraham, a Computer Science graduate with a passion for technology and a knack for turning challenges into opportunities. Currently pursuing a Master's at the University of Florida, my journey has been marked by impactful contributions in the tech domain. I am experienced software engineer trained in cutting-edge technologies, including Machine Learning and Cloud-based resources. 
+            <br/>   
             <br/>
-            Industry experienced software engineer proficient in software development, machine learning and cloud computing.
+            Currently seeking a dynamic Spring 2024 Software Engineering opportunity to leverage and enhance my skills. 
+            <br/>
+            Let's connect to explore how my expertise can contribute to innovative projects and drive success in the software engineering landscape.
           </p>
           <div className="flex justify-center">
             <a
@@ -30,7 +33,7 @@ export default function About() {
             <a
               href="#projects"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              See My Past Work
+              See My Work
             </a>
             <a
              onClick={handleDownload}
