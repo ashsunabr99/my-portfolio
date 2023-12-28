@@ -1,33 +1,33 @@
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "Twitter Engine Clone",
+    subtitle: "Distributed OS",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A twitter engine implemented using erlang actor model and paired with cowboy WebSocket framework which simulates all the basic twitter functions.",
     image: "./project-1.gif",
     link: "https://reactbootcamp.com",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Log data Visualizer",
+    subtitle: "Tableau and NLP",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
-    link: "https://reactbootcamp.com",
+      "This software enables users to analyze textual log data, exploring an analyst's interactions to understand their thought process and behavior.",
+    image: "./Log Data Visualizer.gif",
+    link: "https://info-viz-project.w3spaces.com/",
   },
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
+    title: "E – mall space management system",
+    subtitle: "Spring Boot Framework, React JS, Axios, MySQL",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A virtual space management system, implemented in micro-service architecture where the marketing staff of a mall can book spaces online for sellers.",
     image: "./project-3.gif",
     link: "https://reactbootcamp.com",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
+    title: "Sky Detection Algorithm",
+    subtitle: "Python and Image Processing",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A complete implementation of a sky region detection algorithm within a single image using python, image processing, and energy optimization function.",
     image: "./project-4.gif",
     link: "https://reactbootcamp.com",
   },
