@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "./Ashish_Resume_Fall_23.pdf";
+        link.href = "./Ashish_S_Abraham_Resume.pdf";
         link.download = "Ashish_Abraham_Resume.pdf";
         link.click();
       };
@@ -17,10 +17,11 @@ export default function About() {
             <br className="hidden lg:inline-block" /> Software Engineer/ Tech Enthusiast!
           </h1>
           <p className="mb-8 leading-relaxed">
-           Innovative and results-driven, I'm Ashish Sunny Abraham, a Computer Science graduate with a passion for technology and a knack for turning challenges into opportunities. Currently pursuing a Master's at the University of Florida, my journey has been marked by impactful contributions in the tech domain. I am experienced software engineer trained in cutting-edge technologies, including Machine Learning and Cloud-based resources. 
+            Innovative and results-driven, I'm Ashish Sunny Abraham, a Computer Science graduate with a passion for technology and a knack for turning challenges into opportunities. Recently graduated with a Master's in Computer Science from the University of Florida, my journey has been marked by impactful contributions in the tech domain.
             <br/>   
             <br/>
-            Currently seeking a dynamic Spring 2024 Software Engineering opportunity to leverage and enhance my skills. 
+            Currently seeking a challenging role. I am passionate about harnessing AI, Data Science and System Engineering to solve complex problems and drive innovations. I bring a strong foundation in machine learning, software development, and data analysis, coupled with a proactive approach to learning and a proven ability to think critically under pressure. 
+            <br/>
             <br/>
             Let's connect to explore how my expertise can contribute to innovative projects and drive success in the software engineering landscape.
           </p>
@@ -46,7 +47,7 @@ export default function About() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="./ashish.jpeg"
+            src="./ashish_pic.jpg"
           />
         </div>
       </div>
