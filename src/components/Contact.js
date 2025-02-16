@@ -43,7 +43,7 @@ export default function Contact() {
             marginHeight={0}
             marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
-            src="https://www.google.com/maps/embed/v1/place?q=4000+SW+37th+Blvd,+Gainesville,+FL,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+            src="https://www.google.com/maps/embed/v1/place?q=5745+Bozeman+Drive,+Plano,+TX,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
@@ -51,8 +51,8 @@ export default function Contact() {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                4000 SW 37th Blvd <br />
-                Gainesville, FL, 32608
+                5745 Bozeman Drive <br />
+                Plano, TX, 75024
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
@@ -78,7 +78,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="leading-relaxed mb-5">
-            I am open to work and looking out for Software Engineer/ Developer positions. Do reach out if you want to collaborate or hire!
+            Do reach out if you want to collaborate or get in touch!
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
