@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "./Ashish_S_Abraham_Resume.pdf";
+        link.href = "./AshishSunny_Abraham_Resume.pdf";
         link.download = "Ashish_Abraham_Resume.pdf";
         link.click();
       };
@@ -17,13 +17,13 @@ export default function About() {
             <br className="hidden lg:inline-block" /> Software Engineer/ Tech Enthusiast!
           </h1>
           <p className="mb-8 leading-relaxed">
-            Innovative and results-driven, I'm Ashish Sunny Abraham, a Computer Science graduate with a passion for technology and a knack for turning challenges into opportunities. Recently graduated with a Master's in Computer Science from the University of Florida, my journey has been marked by impactful contributions in the tech domain.
+            Innovative and results-driven, I’m Ashish Sunny Abraham, a Software Engineer with a passion for building scalable systems and solving complex technical challenges. With a Master’s in Computer Science from the University of Florida, I have honed my expertise in software development, AI, data science, and system engineering.
             <br/>   
             <br/>
-            Currently seeking a challenging role. I am passionate about harnessing AI, Data Science and System Engineering to solve complex problems and drive innovations. I bring a strong foundation in machine learning, software development, and data analysis, coupled with a proactive approach to learning and a proven ability to think critically under pressure. 
+            Currently, I’m working at Thomson Reuters as part of the Tax and Accounting technology team, where I contribute to building high-performance applications and optimizing infrastructure. My experience spans machine learning, distributed systems, and data-driven solutions, and I thrive in fast-paced environments that demand critical thinking and innovation. 
             <br/>
             <br/>
-            Let's connect to explore how my expertise can contribute to innovative projects and drive success in the software engineering landscape.
+            Let’s connect to explore opportunities where I can leverage my skills to drive impactful solutions in the ever-evolving tech landscape.
           </p>
           <div className="flex justify-center">
             <a

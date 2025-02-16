@@ -67,10 +67,9 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "Java", "C++", "Python", "C#", ".NET", "HTML/CSS", "React JS", "AngularJS", "JavaScript", 
+  "Java", "Python", "C# .NET", "SQL", "JavaScript", "React.js", "Springboot", ".NET Core", "REST API", "OData API"
 ];
 
 export const tools = [
-  "Oracle SQL Datbases", "SQL", "PostgreSQL", "AWS",
-  "VS Code", "Docker", "Jupyter Notebook", "Springboot", "Android Studio", "Datadog", "Azure", "GitHub", "Tableau", "Postman"
+  "SQL", "PostgreSQL", "Google Cloud Platform", "BigQuery", "AWS S3", "Fivetran", "Docker", "Kubernetes", "Jenkins", "VS Code", "Jupyter Notebook", "Android Studio", "Datadog", "Azure", "GitHub", "Tableau", "Google Looker","Power BI", "Postman"
 ];

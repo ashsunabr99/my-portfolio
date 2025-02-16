@@ -6,10 +6,14 @@
   "dependencies": {
     "@craco/craco": "^5.9.0",
     "@heroicons/react": "^1.0.1",
+    "framer-motion": "^12.4.3",
     "gh-pages": "^6.1.1",
+    "lucide-react": "^0.475.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-horizontal-timeline": "^1.5.3",
     "react-scripts": "^1.1.5",
+    "react-vertical-timeline-component": "^3.5.3",
     "save-dev": "^0.0.1-security",
     "serve": "^14.2.1"
   },
