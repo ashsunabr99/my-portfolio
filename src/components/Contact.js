@@ -4,22 +4,88 @@ export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [gotcha, setGotcha] = React.useState("");
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [status, setStatus] = React.useState("");
   const mapEmbedUrl =
     "https://maps.google.com/maps?q=5745%20Bozeman%20Drive%2C%20Plano%2C%20TX%2075024&z=13&output=embed";
+  const formEndpoint = process.env.REACT_APP_FORMSPREE_ENDPOINT;
+  const formOpenedAtRef = React.useRef(Date.now());
+  const SUBMIT_COOLDOWN_MS = 30_000;
+  const HUMAN_MIN_FILL_MS = 1_500;
 
-  function handleSubmit(e) {
+  function getLastSubmitAt() {
+    try {
+      return Number(localStorage.getItem("contact_last_submit_at") || 0);
+    } catch {
+      return 0;
+    }
+  }
+
+  function setLastSubmitAt(timestamp) {
+    try {
+      localStorage.setItem("contact_last_submit_at", String(timestamp));
+    } catch {
+      // Ignore storage errors (private mode/restricted storage).
+    }
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
+    if (!formEndpoint) {
+      setStatus(
+        "Contact form is not configured yet. Add REACT_APP_FORMSPREE_ENDPOINT."
+      );
+      return;
+    }
 
-    window.location.href = `mailto:ashsabraham99@gmail.com?subject=${subject}&body=${body}`;
+    if (gotcha.trim() !== "") {
+      setStatus("Message sent successfully.");
+      return;
+    }
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    const now = Date.now();
+    const lastSubmitAt = getLastSubmitAt();
+    if (lastSubmitAt && now - lastSubmitAt < SUBMIT_COOLDOWN_MS) {
+      const waitSeconds = Math.ceil((SUBMIT_COOLDOWN_MS - (now - lastSubmitAt)) / 1000);
+      setStatus(`Please wait ${waitSeconds}s before sending another message.`);
+      return;
+    }
+
+    if (now - formOpenedAtRef.current < HUMAN_MIN_FILL_MS) {
+      setStatus("Please take a second to fill out the form, then submit again.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus("");
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ name, email, message, _gotcha: gotcha }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setStatus("Message sent successfully.");
+      setLastSubmitAt(Date.now());
+      setName("");
+      setEmail("");
+      setMessage("");
+      setGotcha("");
+    } catch (error) {
+      setStatus("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -74,6 +140,27 @@ export default function Contact() {
           <p className="leading-relaxed mb-5">
             Do reach out if you want to collaborate or get in touch!
           </p>
+          {status ? (
+            <p className="mb-4 text-sm text-green-400" role="status">
+              {status}
+            </p>
+          ) : null}
+          <div className="relative mb-4">
+            <label htmlFor="company" className="sr-only" aria-hidden="true">
+              Company
+            </label>
+            <input
+              id="company"
+              name="_gotcha"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={gotcha}
+              onChange={(e) => setGotcha(e.target.value)}
+              className="hidden"
+              aria-hidden="true"
+            />
+          </div>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
               Name
@@ -119,8 +206,9 @@ export default function Contact() {
           </div>
           <button
             type="submit"
+            disabled={isSubmitting}
             className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Submit
+            {isSubmitting ? "Sending..." : "Submit"}
           </button>
         </form>
       </div>
