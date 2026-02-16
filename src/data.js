@@ -96,7 +96,11 @@ export const skills = [
   "TensorFlow",
   "PyTorch",
   "Vector Databases",
-  "ODATA APIs"
+  "ODATA APIs",
+  "LLMs",
+  "MCP Servers",
+  "RAG Models",
+  "Prompt Engineering"
 ];
 
 export const tools = [
