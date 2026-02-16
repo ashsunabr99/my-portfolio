@@ -1,39 +1,158 @@
-import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
+import {
+  BadgeCheckIcon,
+  ChipIcon,
+  CodeIcon,
+  DatabaseIcon,
+  CloudIcon,
+  CogIcon,
+} from "@heroicons/react/solid";
 import React from "react";
 import { skills } from "../data";
 import { tools } from "../data";
 
 export default function Skills() {
+  const spotlightSkills = [
+    "Java",
+    "Python",
+    "TypeScript",
+    ".NET",
+    "AWS Bedrock",
+  ];
+  const groupedSections = [
+    {
+      title: "Core Engineering",
+      icon: <CodeIcon className="w-5 h-5" />,
+      items: skills.filter((skill) =>
+        [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "TypeScript",
+          "React.js",
+          "Bootstrap",
+          "Java",
+          "Python",
+          "C#",
+          ".NET",
+          "Spring Boot",
+          "Flask",
+          "PyTest",
+          "REST APIs",
+          "ODATA APIs"
+        ].includes(skill)
+      ),
+      cardTone:
+        "from-teal-400/20 to-slate-900/40 border-teal-300/30",
+    },
+    {
+      title: "Data and AI",
+      icon: <DatabaseIcon className="w-5 h-5" />,
+      items: skills.filter((skill) =>
+        [
+          "PostgreSQL",
+          "MySQL",
+          "MS SQL Server",
+          "BigQuery",
+          "Redis",
+          "Scikit-learn",
+          "LangChain",
+          "TensorFlow",
+          "PyTorch",
+          "Vector Databases"
+        ].includes(skill)
+      ),
+      cardTone: "from-sky-400/20 to-slate-900/40 border-sky-300/30",
+    },
+    {
+      title: "Cloud and Delivery",
+      icon: <CloudIcon className="w-5 h-5" />,
+      items: tools.filter((tool) =>
+        [
+          "AWS S3",
+          "AWS ECS",
+          "AWS Bedrock",
+          "AWS SQS",
+          "AWS Lambda",
+          "Google Cloud Platform",
+          "CI/CD",
+          "Docker",
+          "Kubernetes"
+        ].includes(tool)
+      ),
+      cardTone:
+        "from-blue-400/20 to-slate-900/40 border-blue-300/30",
+    },
+    {
+      title: "Collaboration and Tools",
+      icon: <CogIcon className="w-5 h-5" />,
+      items: tools.filter((tool) =>
+        [
+          "GitHub",
+          "Jira",
+          "Power BI",
+          "Tableau",
+          "VS Code",
+          "Visual Studio",
+          "IntelliJ IDEA",
+          "Postman",
+        ].includes(tool)
+      ),
+      cardTone:
+        "from-blue-400/20 to-slate-900/40 border-blue-300/30",
+    },
+  ];
+
   return (
-    <section id="skills">
-      <div className="container px-5 py-10 mx-auto">
-        <div className="text-center mb-20">
-          <ChipIcon className="w-10 inline-block mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
+    <section
+      id="skills"
+      className="relative overflow-hidden bg-gradient-to-b from-[#0b1220] via-[#111827] to-[#0f172a]"
+    >
+      <div className="absolute -top-28 -left-28 h-72 w-72 rounded-full bg-teal-400/15 blur-3xl" />
+      <div className="absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-sky-400/15 blur-3xl" />
+      <div className="container px-5 py-16 mx-auto relative">
+        <div className="text-center mb-12">
+          <ChipIcon className="w-10 inline-block mb-4 text-teal-300" />
+          <h1 className="sm:text-4xl text-3xl font-semibold title-font text-white mb-4">
             Skills &amp; Technologies
           </h1>
-          <h2>I enjoy diving into and learning new things. Here's a list of technologies I've worked with</h2>
         </div>
-        <div className="flex flex-wrap lg:w-5/5 sm:mx-auto sm:mb-2 -mx-2">
-          {skills.map((skill) => (
-            <div key={skill} className="p-3 sm:w-1/3 w-full">
-              <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                <BadgeCheckIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                <span className="title-font font-medium text-white">
-                  {skill}
-                </span>
+
+        <div className="mb-10">
+          <h2 className="text-sm uppercase tracking-widest text-sky-300 mb-4 text-center">
+            Spotlight Skills
+          </h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {spotlightSkills.map((skill) => (
+              <span
+                key={skill}
+                className="px-4 py-2 rounded-full border border-sky-300/30 bg-sky-500/10 text-sky-100 text-sm font-medium shadow-lg shadow-sky-500/10"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {groupedSections.map((section) => (
+            <div
+              key={section.title}
+              className={`rounded-2xl border p-5 bg-gradient-to-br ${section.cardTone} backdrop-blur-sm`}
+            >
+              <div className="flex items-center gap-2 mb-4 text-white">
+                {section.icon}
+                <h3 className="text-lg font-semibold">{section.title}</h3>
               </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-wrap lg:w-5/5 sm:mx-auto sm:mb-2 -mx-2">
-          {tools.map((tool) => (
-            <div key={tool} className="p-3 sm:w-1/3 w-full">
-              <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                <BadgeCheckIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                <span className="title-font font-medium text-white">
-                  {tool}
-                </span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {section.items.map((item) => (
+                  <div
+                    key={item}
+                    className="bg-slate-950/60 border border-white/10 rounded-lg px-3 py-2 flex items-center transition-transform duration-200 hover:-translate-y-0.5 hover:border-teal-300/40"
+                  >
+                    <BadgeCheckIcon className="text-teal-300 w-5 h-5 flex-shrink-0 mr-3" />
+                    <span className="text-sm font-medium text-white">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
