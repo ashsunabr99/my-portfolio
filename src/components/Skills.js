@@ -12,11 +12,11 @@ import { tools } from "../data";
 
 export default function Skills() {
   const spotlightSkills = [
-    "Java",
-    "Python",
-    "TypeScript",
-    ".NET",
-    "AWS Bedrock",
+    "Full Stack Development",
+    "Objective-Oriented Programming",
+    "Data Structures & Algorithms",
+    "Database Design & Management",
+    "AI & Machine Learning"
   ];
   const groupedSections = [
     {
