@@ -4,23 +4,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^5.9.0",
     "@heroicons/react": "^1.0.1",
-    "framer-motion": "^12.4.3",
     "gh-pages": "^6.1.1",
-    "lucide-react": "^0.475.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-horizontal-timeline": "^1.5.3",
-    "react-scripts": "^1.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "^5.0.1",
     "react-vertical-timeline-component": "^3.5.3",
-    "save-dev": "^0.0.1-security",
     "serve": "^14.2.1"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -32,8 +27,27 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.36",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^7.8.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

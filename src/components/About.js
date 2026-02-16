@@ -1,9 +1,11 @@
 import React from "react";
 
 export default function About() {
+    const profileImage = `${process.env.PUBLIC_URL}/ashish_pic.jpg`;
+    const resumePath = `${process.env.PUBLIC_URL}/AshishSunny_Abraham_Resume.pdf`;
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "./AshishSunny_Abraham_Resume.pdf";
+        link.href = resumePath;
         link.download = "Ashish_Abraham_Resume.pdf";
         link.click();
       };
@@ -36,18 +38,19 @@ export default function About() {
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
               See My Work
             </a>
-            <a
-             onClick={handleDownload}
-             className="ml-4 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded text-lg">
-             Download Résumé
-            </a>
+            <button
+              type="button"
+              onClick={handleDownload}
+              className="ml-4 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded text-lg">
+              Download Resume
+            </button>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
+            <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="./ashish_pic.jpg"
+            src={profileImage}
           />
         </div>
       </div>
