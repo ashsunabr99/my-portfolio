@@ -1,10 +1,12 @@
+const asset = (fileName) => `${process.env.PUBLIC_URL}/${fileName}`;
+
 export const projects = [
   {
     title: "Twitter Engine Clone",
     subtitle: "Distributed OS",
     description:
       "A twitter engine implemented using erlang actor model and paired with JSON based API clone which integrates all design features and functionalities of Twitter using Erlang’s Cowboy web framework. All Twitter Features are implemented.",
-    image: "./twitter_clone.jpg",
+    image: asset("twitter_clone.jpg"),
     link: "https://github.com/ashsunabr99/Twitter_replica_4.2",
   },
   {
@@ -12,7 +14,7 @@ export const projects = [
     subtitle: "Tableau and NLP",
     description:
     "This software enables users to analyze textual log data, exploring an analyst's interactions to understand their thought process and behavior. Using React and Tableau, this interactive dashboard preprocesses data using natural language processing.",
-    image: "./Log Data Visualizer.gif",
+    image: asset("Log Data Visualizer.gif"),
     link: "https://info-viz-project.w3spaces.com/",
   },
   {
@@ -20,7 +22,7 @@ export const projects = [
     subtitle: "Spring Boot Framework, React JS, Axios, MySQL",
     description:
       "A virtual space management system, implemented in micro-service architecture where the marketing staff of a mall can book spaces online for sellers.",
-    image: "./emall.gif",
+    image: asset("emall.gif"),
     link: "https://github.com/ashsunabr99/web-emall",
   },
   {
@@ -28,7 +30,7 @@ export const projects = [
     subtitle: "Python and Image Processing",
     description:
       "A complete implementation of a sky region detection algorithm within a single image using python, image processing, and energy optimization function.",
-    image: "./skydetect.png",
+    image: asset("skydetect.png"),
     link: "https://github.com/ashsunabr99",
   },
   {
@@ -36,7 +38,7 @@ export const projects = [
     subtitle: "Feature Selection · Artificial Intelligence (AI)",
     description:
       "Built a feature selection project which leverages Internet of Medical Things (IoMT) device data for maternal health risk prediction. Through diverse feature selection techniques, a crucial subset of features is identified to improve risk assessment.",
-    image: "./Maternal.png",
+    image: asset("Maternal.png"),
     link: "https://github.com/ashsunabr99/FeatureSelection_MHR",
   },
   {
@@ -44,7 +46,7 @@ export const projects = [
     subtitle: "Erlang · Actor Model",
     description:
       "A bitcoin mining algorithm which uses Erlang and actor model to implement cryptographic hashing for mining bitcoins. A bitcoin is an input that, when “hashed” produces an output smaller than a target value.",
-    image: "./bitcoin.jpg",
+    image: asset("bitcoin.jpg"),
     link: "https://github.com/ashsunabr99",
   },
 ];
