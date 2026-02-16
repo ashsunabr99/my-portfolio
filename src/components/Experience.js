@@ -4,9 +4,16 @@ import "react-vertical-timeline-component/style.min.css";
 import { AcademicCapIcon, BriefcaseIcon, FlagIcon } from "@heroicons/react/solid";
 import timelineElements from "../timelineElements";
 
+function parseRangeStart(range) {
+  const [start] = range.split("-");
+  const [month, year] = start.trim().split("/");
+  return new Date(Number(year), Number(month) - 1, 1).getTime();
+}
+
 export default function Experience() {
-  // 1️⃣ Ensure all dates are parsed correctly for sorting
-  const sortedTimeline = [...timelineElements].sort((a, b) => new Date(a.date) - new Date(b.date));
+  const sortedTimeline = [...timelineElements].sort(
+    (a, b) => parseRangeStart(a.date) - parseRangeStart(b.date)
+  );
 
   return (
     <section id="experience" className="text-gray-400 bg-gray-900 body-font">
@@ -25,7 +32,7 @@ export default function Experience() {
         {/* Timeline Section */}
         <div className="experience w-full p-4">
           <VerticalTimeline lineColor="#FFF">
-            {sortedTimeline.map((element, index) => (
+            {sortedTimeline.map((element) => (
               <VerticalTimelineElement
               key={element.id}
               className={`vertical-timeline-element--${element.icon === "school" ? "education" : "experience"}`}
