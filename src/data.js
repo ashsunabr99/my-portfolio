@@ -5,7 +5,7 @@ export const projects = [
     title: "Twitter Engine Clone",
     subtitle: "Distributed OS",
     description:
-      "A twitter engine implemented using erlang actor model and paired with JSON based API clone which integrates all design features and functionalities of Twitter using Erlang’s Cowboy web framework. All Twitter Features are implemented.",
+      "Built a Twitter-style engine in Erlang using the actor model with a JSON API on Cowboy. Implemented core social features including timelines, follows, and tweet workflows.",
     image: asset("twitter_clone.jpg"),
     link: "https://github.com/ashsunabr99/Twitter_replica_4.2",
   },
@@ -13,7 +13,7 @@ export const projects = [
     title: "Log data Visualizer",
     subtitle: "Tableau and NLP",
     description:
-    "This software enables users to analyze textual log data, exploring an analyst's interactions to understand their thought process and behavior. Using React and Tableau, this interactive dashboard preprocesses data using natural language processing.",
+    "Developed an interactive React and Tableau dashboard to analyze analyst log text. Applied NLP preprocessing to surface user behavior patterns and decision flow.",
     image: asset("Log Data Visualizer.gif"),
     link: "https://info-viz-project.w3spaces.com/",
   },
@@ -21,7 +21,7 @@ export const projects = [
     title: "E – mall space management system",
     subtitle: "Spring Boot Framework, React JS, Axios, MySQL",
     description:
-      "A virtual space management system, implemented in micro-service architecture where the marketing staff of a mall can book spaces online for sellers.",
+      "Built a microservices-based booking platform for mall marketing teams to manage and allocate seller spaces through a web workflow.",
     image: asset("emall.gif"),
     link: "https://github.com/ashsunabr99/web-emall",
   },
@@ -29,7 +29,7 @@ export const projects = [
     title: "Sky Detection Algorithm",
     subtitle: "Python and Image Processing",
     description:
-      "A complete implementation of a sky region detection algorithm within a single image using python, image processing, and energy optimization function.",
+      "Implemented a sky-region detection pipeline in Python using image processing and energy optimization for single-image segmentation.",
     image: asset("skydetect.png"),
     link: "https://github.com/ashsunabr99",
   },
@@ -37,7 +37,7 @@ export const projects = [
     title: "Maternal Health Risk Prediction Model",
     subtitle: "Feature Selection · Artificial Intelligence (AI)",
     description:
-      "Built a feature selection project which leverages Internet of Medical Things (IoMT) device data for maternal health risk prediction. Through diverse feature selection techniques, a crucial subset of features is identified to improve risk assessment.",
+      "Built a maternal health risk model using IoMT data and feature selection techniques to improve prediction quality and interpretability.",
     image: asset("Maternal.png"),
     link: "https://github.com/ashsunabr99/FeatureSelection_MHR",
   },
@@ -45,7 +45,7 @@ export const projects = [
     title: "BITCOIN Mining",
     subtitle: "Erlang · Actor Model",
     description:
-      "A bitcoin mining algorithm which uses Erlang and actor model to implement cryptographic hashing for mining bitcoins. A bitcoin is an input that, when “hashed” produces an output smaller than a target value.",
+      "Created a distributed Bitcoin mining simulation in Erlang using actor-based parallel hashing and configurable target thresholds.",
     image: asset("bitcoin.jpg"),
     link: "https://github.com/ashsunabr99",
   },
@@ -69,9 +69,54 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "Java", "Python", "C# .NET", "SQL", "JavaScript", "React.js", "Springboot", ".NET Core", "REST API", "OData API"
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Bootstrap",
+  "Java",
+  "Python",
+  "C#",
+  ".NET",
+  "Spring Boot",
+  "JUnit",
+  "Flask",
+  "PyTest",
+  "Microservices",
+  "REST APIs",
+  "MVC",
+  "Scikit-learn",
+  "LangChain",
+  "PostgreSQL",
+  "MySQL",
+  "MS SQL Server",
+  "BigQuery",
+  "Redis",
+  "TensorFlow",
+  "PyTorch",
+  "Vector Databases",
+  "ODATA APIs"
 ];
 
 export const tools = [
-  "SQL", "PostgreSQL", "Google Cloud Platform", "BigQuery", "AWS S3", "Fivetran", "Docker", "Kubernetes", "Jenkins", "VS Code", "Jupyter Notebook", "Android Studio", "Datadog", "Azure", "GitHub", "Tableau", "Google Looker","Power BI", "Postman"
+  "Google Cloud Platform",
+  "AWS S3",
+  "AWS ECS",
+  "AWS Bedrock",
+  "AWS SQS",
+  "AWS Lambda",
+  "GitHub",
+  "CI/CD",
+  "Agile/Scrum",
+  "Power BI",
+  "Tableau",
+  "Jira",
+  "VS Code",
+  "IntelliJ IDEA",
+  "Postman",
+  "Visual Studio",
+  "Eclipse",
+  "Docker",
+  "Kubernetes"
 ];

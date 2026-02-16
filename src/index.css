@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#experience .timeline-pop .vertical-timeline-element-content {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+#experience .timeline-pop .vertical-timeline-element-icon {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+#experience .timeline-pop:hover .vertical-timeline-element-content {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(14, 165, 233, 0.18), 0 12px 28px rgba(2, 6, 23, 0.65);
+  border-color: rgba(125, 211, 252, 0.9) !important;
+}
+
+#experience .timeline-pop:hover .vertical-timeline-element-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.15), 0 10px 22px rgba(2, 6, 23, 0.65);
+}
+
+#projects .project-pop .project-overlay,
+#projects .project-pop img,
+#projects .project-pop > div {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, opacity 220ms ease;
+}
+
+#projects .project-pop .project-overlay {
+  backdrop-filter: blur(1px);
+}
+
+#projects .project-pop .project-image {
+  filter: brightness(0.75) saturate(1.05);
+}
+
+#projects .project-pop:hover > div {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(14, 165, 233, 0.18), 0 12px 28px rgba(2, 6, 23, 0.65);
+  border-color: rgba(125, 211, 252, 0.75);
+}
+
+#projects .project-pop:hover .project-overlay {
+  opacity: 1;
+  border-color: rgba(45, 212, 191, 0.55);
+}
+
+#projects .project-pop:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.62) saturate(1.1);
+}
+
+#projects .project-pop .project-text {
+  text-shadow: 0 2px 8px rgba(2, 6, 23, 0.75);
+}
