@@ -58,7 +58,11 @@ export default function Skills() {
           "LangChain",
           "TensorFlow",
           "PyTorch",
-          "Vector Databases"
+          "Vector Databases",
+          "LLMs",
+          "MCP Servers",
+          "RAG Models",
+          "Prompt Engineering"
         ].includes(skill)
       ),
       cardTone: "from-sky-400/20 to-slate-900/40 border-sky-300/30",
