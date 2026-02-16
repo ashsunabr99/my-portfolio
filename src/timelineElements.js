@@ -49,4 +49,4 @@ const timelineElements = [
     },
   ];
   
-  export default timelineElements.reverse();
+  export default timelineElements;
